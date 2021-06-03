@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06538C3F7B20186494241174 /* Pods_Webant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074A5CB5D4A4768E33792AD4 /* Pods_Webant.framework */; };
 		B74D2BB72662B0F800805971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BB62662B0F800805971 /* AppDelegate.swift */; };
 		B74D2BB92662B0F800805971 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BB82662B0F800805971 /* SceneDelegate.swift */; };
-		B74D2BBB2662B0F800805971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BBA2662B0F800805971 /* ViewController.swift */; };
+		B74D2BBB2662B0F800805971 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BBA2662B0F800805971 /* TabBarController.swift */; };
 		B74D2BBE2662B0F800805971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74D2BBC2662B0F800805971 /* Main.storyboard */; };
 		B74D2BC02662B0FA00805971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74D2BBF2662B0FA00805971 /* Assets.xcassets */; };
 		B74D2BC32662B0FA00805971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74D2BC12662B0FA00805971 /* LaunchScreen.storyboard */; };
+		B74D2BCB2662B17B00805971 /* NewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BCA2662B17B00805971 /* NewCollectionViewController.swift */; };
+		B74D2BCD2662B18300805971 /* PopularCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BCC2662B18300805971 /* PopularCollectionViewController.swift */; };
+		B74D2BCF2662B19500805971 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BCE2662B19500805971 /* DetailViewController.swift */; };
+		B74D2BD12662B6D600805971 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BD02662B6D600805971 /* ImageCollectionViewCell.swift */; };
+		B74D2BD32663E7DF00805971 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BD22663E7DF00805971 /* RequestModel.swift */; };
+		B74D2BD52663EC3F00805971 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74D2BD42663EC3F00805971 /* DataLoader.swift */; };
+		B7D13E3B26650C0300F71962 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D13E3A26650C0300F71962 /* FooterView.swift */; };
+		B7D13E43266788B900F71962 /* DetailControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D13E42266788B900F71962 /* DetailControllerInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		074A5CB5D4A4768E33792AD4 /* Pods_Webant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Webant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		340FC41323D4FE3D2D5AB9D2 /* Pods-Webant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webant.release.xcconfig"; path = "Target Support Files/Pods-Webant/Pods-Webant.release.xcconfig"; sourceTree = "<group>"; };
+		660C3163276ECE049312E246 /* Pods-Webant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Webant.debug.xcconfig"; path = "Target Support Files/Pods-Webant/Pods-Webant.debug.xcconfig"; sourceTree = "<group>"; };
 		B74D2BB32662B0F800805971 /* Webant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74D2BB62662B0F800805971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B74D2BB82662B0F800805971 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B74D2BBA2662B0F800805971 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B74D2BBA2662B0F800805971 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B74D2BBD2662B0F800805971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B74D2BBF2662B0FA00805971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B74D2BC22662B0FA00805971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B74D2BC42662B0FA00805971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74D2BCA2662B17B00805971 /* NewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewController.swift; sourceTree = "<group>"; };
+		B74D2BCC2662B18300805971 /* PopularCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewController.swift; sourceTree = "<group>"; };
+		B74D2BCE2662B19500805971 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B74D2BD02662B6D600805971 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B74D2BD22663E7DF00805971 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		B74D2BD42663EC3F00805971 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		B7D13E3A26650C0300F71962 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		B7D13E42266788B900F71962 /* DetailControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailControllerInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06538C3F7B20186494241174 /* Pods_Webant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0CFD084DCFD0F0A9D486688 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				660C3163276ECE049312E246 /* Pods-Webant.debug.xcconfig */,
+				340FC41323D4FE3D2D5AB9D2 /* Pods-Webant.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B74D2BAA2662B0F800805971 = {
 			isa = PBXGroup;
 			children = (
 				B74D2BB52662B0F800805971 /* Webant */,
 				B74D2BB42662B0F800805971 /* Products */,
+				B0CFD084DCFD0F0A9D486688 /* Pods */,
+				EDBFAFD7A20B6D81DC0D315E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,63 @@
 		B74D2BB52662B0F800805971 /* Webant */ = {
 			isa = PBXGroup;
 			children = (
+				B7D13E3C26662A8400F71962 /* Model */,
+				B7D13E3D26662A9D00F71962 /* View */,
+				B7D13E3E26662AA600F71962 /* Controller */,
+				B7D13E3F26662AE000F71962 /* Network */,
+				B74D2BBC2662B0F800805971 /* Main.storyboard */,
 				B74D2BB62662B0F800805971 /* AppDelegate.swift */,
 				B74D2BB82662B0F800805971 /* SceneDelegate.swift */,
-				B74D2BBA2662B0F800805971 /* ViewController.swift */,
-				B74D2BBC2662B0F800805971 /* Main.storyboard */,
 				B74D2BBF2662B0FA00805971 /* Assets.xcassets */,
 				B74D2BC12662B0FA00805971 /* LaunchScreen.storyboard */,
 				B74D2BC42662B0FA00805971 /* Info.plist */,
 			);
 			path = Webant;
+			sourceTree = "<group>";
+		};
+		B7D13E3C26662A8400F71962 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B74D2BD22663E7DF00805971 /* RequestModel.swift */,
+				B7D13E42266788B900F71962 /* DetailControllerInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7D13E3D26662A9D00F71962 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B74D2BD02662B6D600805971 /* ImageCollectionViewCell.swift */,
+				B7D13E3A26650C0300F71962 /* FooterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7D13E3E26662AA600F71962 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B74D2BBA2662B0F800805971 /* TabBarController.swift */,
+				B74D2BCA2662B17B00805971 /* NewCollectionViewController.swift */,
+				B74D2BCC2662B18300805971 /* PopularCollectionViewController.swift */,
+				B74D2BCE2662B19500805971 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7D13E3F26662AE000F71962 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B74D2BD42663EC3F00805971 /* DataLoader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EDBFAFD7A20B6D81DC0D315E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				074A5CB5D4A4768E33792AD4 /* Pods_Webant.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B74D2BC72662B0FA00805971 /* Build configuration list for PBXNativeTarget "Webant" */;
 			buildPhases = (
+				5D7A7868EB9440AF276732EB /* [CP] Check Pods Manifest.lock */,
 				B74D2BAF2662B0F800805971 /* Sources */,
 				B74D2BB02662B0F800805971 /* Frameworks */,
 				B74D2BB12662B0F800805971 /* Resources */,
+				1DD530BA23EA278228960D54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +214,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DD530BA23EA278228960D54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webant/Pods-Webant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Webant/Pods-Webant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Webant/Pods-Webant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D7A7868EB9440AF276732EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Webant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B74D2BAF2662B0F800805971 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74D2BBB2662B0F800805971 /* ViewController.swift in Sources */,
+				B74D2BBB2662B0F800805971 /* TabBarController.swift in Sources */,
+				B74D2BCD2662B18300805971 /* PopularCollectionViewController.swift in Sources */,
 				B74D2BB72662B0F800805971 /* AppDelegate.swift in Sources */,
+				B74D2BCF2662B19500805971 /* DetailViewController.swift in Sources */,
 				B74D2BB92662B0F800805971 /* SceneDelegate.swift in Sources */,
+				B7D13E43266788B900F71962 /* DetailControllerInput.swift in Sources */,
+				B7D13E3B26650C0300F71962 /* FooterView.swift in Sources */,
+				B74D2BD32663E7DF00805971 /* RequestModel.swift in Sources */,
+				B74D2BD12662B6D600805971 /* ImageCollectionViewCell.swift in Sources */,
+				B74D2BCB2662B17B00805971 /* NewCollectionViewController.swift in Sources */,
+				B74D2BD52663EC3F00805971 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +415,7 @@
 		};
 		B74D2BC82662B0FA00805971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660C3163276ECE049312E246 /* Pods-Webant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +435,7 @@
 		};
 		B74D2BC92662B0FA00805971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340FC41323D4FE3D2D5AB9D2 /* Pods-Webant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
