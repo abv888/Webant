@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import AlamofireImage
-import Alamofire
+import Kingfisher
 
 class DetailViewController: UIViewController {
     
@@ -47,8 +46,10 @@ class DetailViewController: UIViewController {
     
     private func setupData() {
         fullImageView.contentMode = .scaleAspectFit
-        if let requestString = inputData?.imageRequestString, let requestUrl = URL(string: requestString) {
-            fullImageView.af.setImage(withURL: requestUrl)
+        fullImageView.kf.indicatorType = .activity
+        if let requestString = inputData?.imageRequestString {
+            let resource = ImageResource(downloadURL: URL(string: requestString)!, cacheKey: requestString)
+            fullImageView.kf.setImage(with: resource)
         } else {
             fullImageView.image = UIImage(named: "NoInternet")
         }

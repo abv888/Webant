@@ -7,7 +7,7 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
+import Kingfisher
 
 @available(iOS 12.1, *)
 class NewCollectionViewController: UICollectionViewController {
@@ -32,7 +32,9 @@ class NewCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         setupNavigation()
         setColectionView()
-        loadData(page: page)
+        DispatchQueue.main.async {
+            self.loadData(page: self.page)
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -67,7 +69,9 @@ class NewCollectionViewController: UICollectionViewController {
         page = 1
         loadedFlag = false
         photos.removeAll()
-        loadData(page: page)
+        DispatchQueue.main.async {
+            self.loadData(page: self.page)
+        }
         collectionView.refreshControl?.endRefreshing()
     }
     
@@ -79,11 +83,11 @@ class NewCollectionViewController: UICollectionViewController {
         DataLoader.shared.loadNewPhotos(page:page ,result: {[weak self] (model) in
             if model != nil{
                 self?.requestModel = model
-                self?.collectionView.reloadData()
                 self?.loadedFlag = true
                 self?.photos.append(contentsOf: (model?.data)!)
                 self?.totalPage = model?.countOfPages ?? 1
                 self?.isLoading = false
+                self?.collectionView.reloadData()
             } else {
                 self?.photos.removeAll()
                 self?.loadedFlag = false
@@ -122,7 +126,9 @@ class NewCollectionViewController: UICollectionViewController {
                 return UICollectionViewCell()
             }
             DispatchQueue.main.async {
-                cell.imageView.af.setImage(withURL: URL(string: "http://gallery.dev.webant.ru/media/\(imageName)")!)
+                cell.imageView.kf.indicatorType = .activity
+                let resource = ImageResource(downloadURL: URL(string: "http://gallery.dev.webant.ru/media/\(imageName)")!, cacheKey: "http://gallery.dev.webant.ru/media/\(imageName)")
+                cell.imageView.kf.setImage(with: resource)
                 cell.imageView.contentMode = .scaleAspectFill
             }
         }
