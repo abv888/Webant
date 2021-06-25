@@ -11,6 +11,8 @@ import Alamofire
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var detailStackView: UIStackView!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var contentView: UIView!

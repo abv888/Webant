@@ -8,5 +8,6 @@ target 'Webant' do
   # Pods for Webant
   pod 'Alamofire', '~> 5.0.0-beta.3'
   pod 'AlamofireImage'
+  pod 'Kingfisher'
 
 end

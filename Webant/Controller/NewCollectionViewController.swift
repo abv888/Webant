@@ -25,14 +25,7 @@ class NewCollectionViewController: UICollectionViewController {
     @IBOutlet weak var noInternetLabel: UILabel!
     
     
-    private var requestModel: RequestModel? {
-        didSet{
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
-    
+    private var requestModel: RequestModel?
     private var photos: [DataModel] = []
     
     override func viewDidLoad() {
@@ -86,6 +79,7 @@ class NewCollectionViewController: UICollectionViewController {
         DataLoader.shared.loadNewPhotos(page:page ,result: {[weak self] (model) in
             if model != nil{
                 self?.requestModel = model
+                self?.collectionView.reloadData()
                 self?.loadedFlag = true
                 self?.photos.append(contentsOf: (model?.data)!)
                 self?.totalPage = model?.countOfPages ?? 1
@@ -200,9 +194,13 @@ class NewCollectionViewController: UICollectionViewController {
 extension NewCollectionViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let width =  (self.view.frame.size.width - 16*3) / 2
-        let size = CGSize(width: width , height: (width) * 13 / 17)
+        let width: CGFloat?
+        if UIApplication.shared.statusBarOrientation.isPortrait {
+            width =  (self.view.frame.size.width - 16*3) / 2
+        }else {
+            width =  (self.view.frame.size.width - 16*4) / 4
+        }
+        let size = CGSize(width: width! , height: (width!) * 13 / 17)
         return size
     }
     
