@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AlamofireImage
+import Kingfisher
 
 class ImageCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "ImageCell"
@@ -29,7 +29,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super .prepareForReuse()
-        imageView.af.cancelImageRequest()
+        imageView.kf.cancelDownloadTask()
         imageView.image = nil
     }
     

@@ -32,12 +32,12 @@
         <!--New-->
         <scene sceneID="NqD-BT-frk">
             <objects>
-                <collectionViewController title="New" id="Fkx-kl-sNl" customClass="NewCollectionViewController" customModule="Webant" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="New" id="Fkx-kl-sNl" customClass="CollectionViewController" customModule="Webant" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xep-gQ-9dN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="16" id="NnF-mi-MHC">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="12" id="NnF-mi-MHC">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -117,7 +117,7 @@
         <!--Popular-->
         <scene sceneID="diA-c5-GaV">
             <objects>
-                <collectionViewController title="Popular" id="y84-zB-UNm" customClass="PopularCollectionViewController" customModule="Webant" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Popular" id="y84-zB-UNm" customClass="CollectionViewController" customModule="Webant" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GpB-d6-6Dh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -291,7 +291,7 @@
                 <navigationController title="New" automaticallyAdjustsScrollViewInsets="NO" id="gAQ-kv-8Lh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="New" image="newIcon" id="ikz-MC-trI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQJ-SN-VeF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="iconfinder_5208417_arrow_back_left_navigation_previous_icon_64px" backIndicatorTransitionMaskImage="iconfinder_5208417_arrow_back_left_navigation_previous_icon_64px" id="AQJ-SN-VeF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -313,7 +313,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xDH-EU-n5A" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Popular" image="popularIcon" id="w46-UW-epI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nN1-i1-oSl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="iconfinder_5208417_arrow_back_left_navigation_previous_icon_64px" backIndicatorTransitionMaskImage="iconfinder_5208417_arrow_back_left_navigation_previous_icon_64px" id="nN1-i1-oSl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -331,10 +331,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="f3k-4a-4f1"/>
+        <segue reference="Sqe-2O-2b5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="NoInternet" width="75" height="75"/>
+        <image name="iconfinder_5208417_arrow_back_left_navigation_previous_icon_64px" width="32" height="32"/>
         <image name="newIcon" width="26" height="26"/>
         <image name="popularIcon" width="26" height="26"/>
         <systemColor name="systemBackgroundColor">

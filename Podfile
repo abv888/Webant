@@ -6,8 +6,8 @@ target 'Webant' do
   use_frameworks!
 
   # Pods for Webant
-  pod 'Alamofire', '~> 5.0.0-beta.3'
-  pod 'AlamofireImage'
+  # pod 'Alamofire', '~> 5.0.0-beta.3'
   pod 'Kingfisher'
+  pod 'RxAlamofire'
 
 end

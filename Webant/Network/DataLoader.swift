@@ -7,37 +7,67 @@
 
 import Foundation
 import Alamofire
-import AlamofireImage
+import RxSwift
+import RxAlamofire
 
 class DataLoader {
     private init() {}
     
     static let shared: DataLoader = DataLoader()
     
-    let data_url = "http://gallery.dev.webant.ru/api/photos?"
-    let photos_url = "http://gallery.dev.webant.ru/media/"
+    let dataUrl = "http://gallery.dev.webant.ru/api/photos?"
+    let photosUrl = "http://gallery.dev.webant.ru/media/"
     
-    func loadNewPhotos(page: Int, result: @escaping ((RequestModel?)->())) {
+    public var errorNew: Error?
+    public var errorPop: Error?
+
+    private let disposeBagNew = DisposeBag()
+    private let disposeBagPop = DisposeBag()
+    
+    public func loadNew(page: Int, result: @escaping ((RequestModel?)->())) {
         let requestParams: Parameters =  [
             "new": "true",
             "limit": "10",
             "page": page
         ]
-        
-        AF.request(data_url, method: .get, parameters: requestParams).responseDecodable(of: RequestModel.self) { response in
-            result(response.value)
-        }
+        RxAlamofire.requestJSON(.get, dataUrl, parameters: requestParams)
+            .subscribe(onNext: {(response, any) in
+            if 200..<300 ~= response.statusCode {
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: any)
+                    let newPhotos = try JSONDecoder().decode(RequestModel.self, from: data)
+                    result(newPhotos)
+                } catch let error {
+                    self.errorNew = error
+                }
+            }
+            }).disposed(by: disposeBagNew)
+
     }
     
-    func loadPopularPhotos(page: Int, result: @escaping ((RequestModel?)->())) {
+    public func loadPop(page: Int, result: @escaping ((RequestModel?)->())) {
         let requestParams: Parameters =  [
             "popular": "true",
             "limit": "10",
             "page": page
         ]
-        
-        AF.request(data_url, method: .get, parameters: requestParams).responseDecodable(of: RequestModel.self) { response in
-            result(response.value)
-        }
+        RxAlamofire.requestJSON(.get, dataUrl, parameters: requestParams).subscribe(onNext: {(response, any) in
+            if 200..<300 ~= response.statusCode {
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: any)
+                    let popPhotos = try JSONDecoder().decode(RequestModel.self, from: data)
+                    result(popPhotos)
+                } catch let error {
+                    self.errorNew = error
+                }
+            }
+        }).disposed(by: disposeBagPop)
+
     }
+    
+
+    
+    
+    
+
 }

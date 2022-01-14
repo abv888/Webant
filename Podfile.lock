@@ -1,25 +1,30 @@
 PODS:
-  - Alamofire (5.0.5)
-  - AlamofireImage (4.0.3):
-    - Alamofire (< 6.0.0, >= 5.0.2)
+  - Alamofire (5.4.3)
   - Kingfisher (6.3.0)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxSwift (6.2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.3)
-  - AlamofireImage
   - Kingfisher
+  - RxAlamofire
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AlamofireImage
     - Kingfisher
+    - RxAlamofire
+    - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
-  AlamofireImage: 3d1a2010519e58675318735580eb856e88840ff7
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: ca650cb9682eaf196a6d528427e4e95d605df24c
+PODFILE CHECKSUM: 6b7efb616c9be48dabbd980f5a9c35eb8f814394
 
 COCOAPODS: 1.10.1
